@@ -1,0 +1,26 @@
+{
+  "name": "auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "del-cli dist",
+    "build": "npm run clean && tsc",
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "start": "npm run build && node dist/index.js",
+    "release:patch": "npm run build && git add . && git commit -m 'chore: release new patch version' && git push && npm run version && npm publish"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.0",
+    "@types/node": "^22.10.0",
+    "nodemon": "^3.1.7",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.2"
+  }
+}
