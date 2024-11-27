@@ -8,7 +8,7 @@
     "build": "npm run clean && tsc",
     "dev": "nodemon --exec ts-node src/index.ts",
     "start": "npm run build && node dist/index.js",
-    "release:patch": "npm run build && git add . && git commit -m 'chore: release new patch version' && git push && npm run version && npm publish"
+    "release:patch": "npm run build && git add . && git commit -m 'chore: release new patch version' && git push && npm version patch && npm publish"
   },
   "keywords": [],
   "author": "",
