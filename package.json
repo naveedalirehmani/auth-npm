@@ -1,8 +1,8 @@
 {
-  "name": "auth",
+  "name": "auth-d",
   "version": "1.0.4",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "clean": "del-cli dist",
     "build": "npm run clean && tsc",
